@@ -86,7 +86,7 @@ class _LoginSignupPageState extends State<LoginSignupPage>
                     const SizedBox(height: 50),
                     const Center(
                       child: Text(
-                        'Welcome to\n Homecraft',
+                        'Welcome to\n HomeKrafted',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 40,
