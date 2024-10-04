@@ -37,6 +37,8 @@ flutter_icons:
   android: true
   ios: true
   image_path: "assets/foodimages/HomeKrafted Logo.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/foodimages/play_store_512.png"
 
 dev_dependencies:
 
