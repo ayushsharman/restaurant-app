@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:temp_customer_app/src/auth/login.dart';
 import 'package:temp_customer_app/src/features/homscreen/homescreen.dart';
+import 'package:temp_customer_app/src/features/splashscreen/splash.dart';
 
 import 'src/routes/navigation.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginSignupPage(),
+      home: const SplashScreen(),
     );
   }
 }

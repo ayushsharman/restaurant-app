@@ -1,0 +1,1 @@
+ E:\\restaurant-app\\.dart_tool\\flutter_build\\070fc8e119182a727fbbe7c870724aac\\native_assets.yaml: 

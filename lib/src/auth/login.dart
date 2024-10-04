@@ -18,7 +18,7 @@ class _LoginSignupPageState extends State<LoginSignupPage>
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 500),
     );
     _animation = CurvedAnimation(
       parent: _animationController,
@@ -43,13 +43,10 @@ class _LoginSignupPageState extends State<LoginSignupPage>
     });
   }
 
-  // Navigation method
   void _navigateToBottomNavigation() {
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(
-          builder: (context) =>
-              BottomNavigation()), // Replace with your BottomNavigation widget
+      MaterialPageRoute(builder: (context) => BottomNavigation()),
     );
   }
 
@@ -59,7 +56,7 @@ class _LoginSignupPageState extends State<LoginSignupPage>
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
                     'assets/foodimages/HomeKrafted Logo.png'), // Use local asset path
@@ -74,7 +71,7 @@ class _LoginSignupPageState extends State<LoginSignupPage>
                 end: Alignment.bottomCenter,
                 colors: [
                   Colors.black.withOpacity(0.7),
-                  Colors.red.withOpacity(0.5),
+                  Colors.green.withOpacity(0.5),
                 ],
               ),
             ),
@@ -82,12 +79,12 @@ class _LoginSignupPageState extends State<LoginSignupPage>
           SafeArea(
             child: SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24.0),
+                padding: const EdgeInsets.symmetric(horizontal: 24.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 50),
-                    Center(
+                    const SizedBox(height: 50),
+                    const Center(
                       child: Text(
                         'Welcome to\n Homecraft',
                         style: TextStyle(
@@ -97,11 +94,11 @@ class _LoginSignupPageState extends State<LoginSignupPage>
                         ),
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     AnimatedContainer(
-                      duration: Duration(milliseconds: 500),
+                      duration: const Duration(milliseconds: 500),
                       curve: Curves.easeInOut,
-                      padding: EdgeInsets.all(24),
+                      padding: const EdgeInsets.all(24),
                       decoration: BoxDecoration(
                         color: Colors.white.withOpacity(0.9),
                         borderRadius: BorderRadius.circular(20),
@@ -109,7 +106,7 @@ class _LoginSignupPageState extends State<LoginSignupPage>
                           BoxShadow(
                             color: Colors.black.withOpacity(0.1),
                             blurRadius: 10,
-                            offset: Offset(0, 5),
+                            offset: const Offset(0, 5),
                           ),
                         ],
                       ),
@@ -123,9 +120,9 @@ class _LoginSignupPageState extends State<LoginSignupPage>
                               _buildToggleButton('Log In', isLogin),
                             ],
                           ),
-                          SizedBox(height: 30),
+                          const SizedBox(height: 30),
                           AnimatedSwitcher(
-                            duration: Duration(milliseconds: 500),
+                            duration: const Duration(milliseconds: 500),
                             child: isLogin
                                 ? _buildLoginForm()
                                 : _buildSignUpForm(),
@@ -133,7 +130,7 @@ class _LoginSignupPageState extends State<LoginSignupPage>
                         ],
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                   ],
                 ),
               ),
@@ -148,10 +145,10 @@ class _LoginSignupPageState extends State<LoginSignupPage>
     return GestureDetector(
       onTap: _toggleView,
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 300),
-        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+        duration: const Duration(milliseconds: 300),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
         decoration: BoxDecoration(
-          color: isActive ? Colors.red : Colors.transparent,
+          color: isActive ? Colors.green : Colors.transparent,
           borderRadius: BorderRadius.circular(30),
         ),
         child: Text(
@@ -173,37 +170,37 @@ class _LoginSignupPageState extends State<LoginSignupPage>
           hint: 'Email or Username',
           icon: Icons.email,
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         _buildTextField(
           hint: 'Password',
           icon: Icons.lock,
           isPassword: true,
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Align(
           alignment: Alignment.centerRight,
           child: TextButton(
             onPressed: () {},
-            child: Text(
+            child: const Text(
               'Forgot Password?',
-              style: TextStyle(color: Colors.red),
+              style: TextStyle(color: Colors.green),
             ),
           ),
         ),
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         ElevatedButton(
-          onPressed: _navigateToBottomNavigation, // Navigate on button press
-          child: Text('Log In'),
+          onPressed: _navigateToBottomNavigation,
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.red,
-            padding: EdgeInsets.symmetric(vertical: 16),
+            backgroundColor: Colors.green,
+            padding: const EdgeInsets.symmetric(vertical: 16),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
           ),
+          child: const Text('Log In', style: TextStyle(color: Colors.white)),
         ),
-        SizedBox(height: 24),
-        Row(
+        const SizedBox(height: 24),
+        const Row(
           children: [
             Expanded(child: Divider()),
             Padding(
@@ -213,14 +210,14 @@ class _LoginSignupPageState extends State<LoginSignupPage>
             Expanded(child: Divider()),
           ],
         ),
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _buildSocialButton(Icons.facebook, Colors.blue),
-            SizedBox(width: 16),
-            _buildSocialButton(Icons.g_mobiledata, Colors.red),
-            SizedBox(width: 16),
+            const SizedBox(width: 16),
+            _buildSocialButton(Icons.g_mobiledata, Colors.green),
+            const SizedBox(width: 16),
             _buildSocialButton(Icons.apple, Colors.black),
           ],
         ),
@@ -233,30 +230,30 @@ class _LoginSignupPageState extends State<LoginSignupPage>
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         _buildTextField(hint: 'First Name', icon: Icons.person),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         _buildTextField(hint: 'Last Name', icon: Icons.person_outline),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         _buildTextField(hint: 'Email', icon: Icons.email),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         _buildTextField(hint: 'Password', icon: Icons.lock, isPassword: true),
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         ElevatedButton(
-          onPressed: _navigateToBottomNavigation, // Navigate on button press
-          child: Text('Sign Up'),
+          onPressed: _navigateToBottomNavigation,
           style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.red,
-            padding: EdgeInsets.symmetric(vertical: 16),
+            backgroundColor: Colors.green,
+            padding: const EdgeInsets.symmetric(vertical: 16),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),
             ),
           ),
+          child: const Text('Sign Up', style: TextStyle(color: Colors.white)),
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         TextButton(
           onPressed: _toggleView,
-          child: Text(
+          child: const Text(
             'Already have an account? Log In',
-            style: TextStyle(color: Colors.red),
+            style: TextStyle(color: Colors.green),
           ),
         ),
       ],
@@ -277,9 +274,10 @@ class _LoginSignupPageState extends State<LoginSignupPage>
         obscureText: isPassword,
         decoration: InputDecoration(
           hintText: hint,
-          prefixIcon: Icon(icon, color: Colors.red),
+          prefixIcon: Icon(icon, color: Colors.green),
           border: InputBorder.none,
-          contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         ),
       ),
     );
@@ -287,7 +285,7 @@ class _LoginSignupPageState extends State<LoginSignupPage>
 
   Widget _buildSocialButton(IconData icon, Color color) {
     return Container(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: color.withOpacity(0.1),

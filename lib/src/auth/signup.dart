@@ -28,9 +28,9 @@ class SignupPage extends StatelessWidget {
                     Navigator.pop(context);
                   }
                 },
-                fillColor: Colors.red,
+                fillColor: Colors.green,
                 selectedColor: Colors.white,
-                color: Colors.red,
+                color: Colors.green,
                 borderRadius: BorderRadius.circular(30),
               ),
               SizedBox(height: 30),
@@ -76,7 +76,7 @@ class SignupPage extends StatelessWidget {
                 child: Text('Sign Up'),
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
+                  backgroundColor: Colors.green,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),

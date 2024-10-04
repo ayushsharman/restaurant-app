@@ -314,7 +314,7 @@ class Day2day extends StatelessWidget {
           Text(kitchen),
           Row(
             children: [
-              Icon(Icons.location_on, size: 16, color: Colors.orange),
+              Icon(Icons.location_on, size: 16, color: Colors.green),
               Text('$distance km'),
             ],
           ),

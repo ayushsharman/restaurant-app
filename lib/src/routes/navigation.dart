@@ -15,25 +15,25 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
   // List of screens for each navigation item
   final List<Widget> _screens = [
-    HomeScreen(), // HomeScreen for the first tab
-    Products_screen(), // ProductsScreen for the second tab
-    Day2day(), // Day2DayScreen for the third tab
-    FoodOrderTrackingScreen(), // OrdersScreen for the fourth tab
-    AccountManagementScreen(), // AccountScreen for the fifth tab (previously HomeScreen)
+    HomeScreen(),
+    Products_screen(),
+    Day2day(),
+    FoodOrderTrackingScreen(),
+    AccountManagementScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _screens[_currentIndex], // Display the selected screen
+      body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.red, // Active color set to red
-        unselectedItemColor: Colors.grey, // Inactive color set to grey
+        selectedItemColor: Colors.green,
+        unselectedItemColor: Colors.grey,
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
-            _currentIndex = index; // Update the index when a tab is tapped
+            _currentIndex = index;
           });
         },
         items: const [
@@ -46,47 +46,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
         ],
       ),
-    );
-  }
-}
-
-// Placeholder classes for other screens
-class ProductsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Products")),
-      body: Center(child: Text("Products Screen")),
-    );
-  }
-}
-
-class Day2DayScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Day2Day")),
-      body: Center(child: Text("Day2Day Screen")),
-    );
-  }
-}
-
-class OrdersScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Orders")),
-      body: Center(child: Text("Orders Screen")),
-    );
-  }
-}
-
-class AccountScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Account")),
-      body: Center(child: Text("Account Screen")),
     );
   }
 }

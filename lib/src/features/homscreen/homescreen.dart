@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(fontSize: 12, color: Colors.grey)),
         ],
       ),
-      leading: const Icon(Icons.location_on, color: Colors.red),
+      leading: const Icon(Icons.location_on, color: Colors.green),
       actions: [
         IconButton(
             icon: const Icon(Icons.search, color: Colors.black),
@@ -122,9 +122,10 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildQuickActionButtons() {
-    return Container(
+    return SizedBox(
       height: 100,
       child: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         scrollDirection: Axis.horizontal,
         children: [
           _buildQuickActionButton('Subscription', Icons.calendar_today),
@@ -137,7 +138,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildQuickActionButton(String label, IconData icon) {
-    return Container(
+    return SizedBox(
       width: 80,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -148,7 +149,7 @@ class HomeScreen extends StatelessWidget {
               color: Colors.grey[200],
               shape: BoxShape.circle,
             ),
-            child: Icon(icon, color: Colors.red),
+            child: Icon(icon, color: Colors.green),
           ),
           const SizedBox(height: 4),
           Text(label,
@@ -166,8 +167,9 @@ class HomeScreen extends StatelessWidget {
         children: [
           Expanded(
             child: ElevatedButton.icon(
-              icon: const Icon(Icons.flash_on),
-              label: const Text('Lunch now'),
+              icon: const Icon(Icons.flash_on, color: Colors.white),
+              label: const Text('Lunch now',
+                  style: TextStyle(color: Colors.white)),
               onPressed: () {},
               style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
             ),
@@ -175,8 +177,9 @@ class HomeScreen extends StatelessWidget {
           const SizedBox(width: 8),
           Expanded(
             child: OutlinedButton.icon(
-              icon: const Icon(Icons.access_time),
-              label: const Text('For later'),
+              icon: const Icon(Icons.access_time, color: Colors.green),
+              label: const Text('For later',
+                  style: TextStyle(color: Colors.green)),
               onPressed: () {},
             ),
           ),
@@ -261,7 +264,7 @@ class HomeScreen extends StatelessWidget {
           child: Text('Special Categories to Cherish',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         ),
-        Container(
+        SizedBox(
           height: 120,
           child: ListView(
             scrollDirection: Axis.horizontal,

@@ -77,7 +77,7 @@ class FoodOrderTrackingScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Order Tracking',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.green,
         centerTitle: true,
       ),
       body: SafeArea(

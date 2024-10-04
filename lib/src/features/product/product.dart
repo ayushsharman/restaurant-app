@@ -130,7 +130,7 @@ class _ProductsScreenState extends State<Products_screen> {
               style: TextStyle(fontSize: 12, color: Colors.grey)),
         ],
       ),
-      leading: const Icon(Icons.location_on, color: Colors.red),
+      leading: const Icon(Icons.location_on, color: Colors.green),
       actions: [
         IconButton(
             icon: const Icon(Icons.search, color: Colors.black),
@@ -498,7 +498,7 @@ class _ProductsScreenState extends State<Products_screen> {
                     Text(
                       '${specialOffers[index]['originalPrice']} - ${specialOffers[index]['discountedPrice']}',
                       textAlign: TextAlign.center,
-                      style: const TextStyle(color: Colors.red),
+                      style: const TextStyle(color: Colors.green),
                     ),
                   ],
                 ),
