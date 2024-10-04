@@ -1297,6 +1297,7 @@ Marking id:line3:2131165241 used because it matches string pool constant line
 @color/androidx_core_secondary_text_default_material_light : reachable=true
 @color/call_notification_answer_color : reachable=false
 @color/call_notification_decline_color : reachable=false
+@color/ic_launcher_background : reachable=false
 @color/notification_action_color_filter : reachable=false
     @color/androidx_core_secondary_text_default_material_light
 @color/notification_icon_bg_color : reachable=false
@@ -1328,6 +1329,7 @@ Marking id:line3:2131165241 used because it matches string pool constant line
 @drawable/ic_call_answer_video_low : reachable=false
 @drawable/ic_call_decline : reachable=false
 @drawable/ic_call_decline_low : reachable=false
+@drawable/ic_launcher_foreground : reachable=false
 @drawable/launch_background : reachable=false
 @drawable/notification_action_background : reachable=false
     @color/androidx_core_ripple_material_light
@@ -1477,6 +1479,8 @@ Marking id:line3:2131165241 used because it matches string pool constant line
 @layout/notification_template_part_time : reachable=false
     @style/TextAppearance_Compat_Notification_Time
 @mipmap/ic_launcher : reachable=true
+    @color/ic_launcher_background
+    @drawable/ic_launcher_foreground
 @string/androidx_startup : reachable=true
 @string/call_notification_answer_action : reachable=false
 @string/call_notification_answer_video_action : reachable=false
